@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_patologia"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+    <!--tools:context="com.example.cristian.muscleregistrationylogin.dummy.Patologia"-->
+
+
+    <CheckBox
+        android:id="@+id/etApendicitis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Apendicitis" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etPeritonitis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etApendicitis"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Peritonitis" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etUlcera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etPeritonitis"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Ulcera" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etColonIrritable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etUlcera"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Colon Irritable" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etAnemia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etColonIrritable"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Anemia" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etAnorexia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etAnemia"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Anorexia" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etApnea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etAnorexia"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Apnea" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etAsma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etApnea"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Asma" />
+    <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etAterosclerosis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etAsma"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Aterosclerosis" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etBronquiectasias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etAterosclerosis"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Bronquiectasias" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etBronquitis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etBronquiectasias"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Bronquitis" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etBrucelosis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etBronquitis"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Brucelosis" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etBulimia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etBrucelosis"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Bulimia" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etCalculosRenales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etBulimia"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Calculos Renales" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etLitiasisRenal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etCalculosRenales"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Litiasis Renal" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etDepresión"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etCalculosRenales"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Depresión" />
+        <!--android:imputType="phone"-->
+    <CheckBox
+        android:id="@+id/etHiperlipemiasYColesterolElevado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/etDepresión"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Hiperlipemias y colesterol Elevado" />
+        <!--android:imputType="phone"-->
+
+</RelativeLayout>
