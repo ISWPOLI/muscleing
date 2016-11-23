@@ -19,14 +19,7 @@ public class Select3 extends AppCompatActivity {
         final Button btDieta = (Button) findViewById(R.id.btDieta);
         final Button btRutina = (Button) findViewById(R.id.btRutina);
         final Button btLogros = (Button) findViewById(R.id.btLogros);
-        btDieta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent registerIntent = new Intent(Select3.this, Dieta4.class);
-                Select3.this.startActivity(registerIntent);
-            }
-        });
         btDieta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -8,55 +8,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/cuadritos"
+    android:background="@drawable/curves"
     tools:context="com.example.cristian.muscleregistrationylogin.UserAreaActivity2"
     >
-
-    <CheckBox
-        android:text="Frutas    "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cbFrutas"
-        android:layout_below="@+id/cbCereales"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/colorAccent"
-        android:layout_alignRight="@+id/cbGranos"
-        android:layout_alignEnd="@+id/cbGranos" />
-
-    <CheckBox
-        android:text="Cereales"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cbCereales"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/cbHarinas"
-        android:background="@color/colorAccent"
-        android:layout_alignRight="@+id/cbFrutas"
-        android:layout_alignEnd="@+id/cbFrutas" />
-
-    <CheckBox
-        android:text="Harinas  "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cbHarinas"
-        android:layout_below="@+id/cbCarnes"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/colorAccent" />
-
-    <CheckBox
-        android:text="Carnes  "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cbCarnes"
-        android:layout_below="@+id/cbLacteos"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/colorAccent"
-        android:layout_alignRight="@+id/cbHarinas"
-        android:layout_alignEnd="@+id/cbHarinas" />
 
     <Button
         android:text="Siguiente"
@@ -71,38 +25,101 @@
         android:layout_alignParentEnd="true"
         android:background="@color/colorAccent" />
 
+
     <CheckBox
-        android:text="Lacteos"
+        android:text="Tonificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="143dp"
-        android:id="@+id/cbLacteos"
-        android:layout_below="@+id/spAlergias"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/colorAccent"
-        android:layout_alignRight="@+id/cbCarnes"
-        android:layout_alignEnd="@+id/cbCarnes" />
+        android:id="@+id/checkBox2"
+        android:layout_alignBottom="@+id/checkBox3"
+        android:layout_alignRight="@+id/textView6"
+        android:layout_alignEnd="@+id/textView6" />
+
+    <CheckBox
+        android:text="Bajar de peso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_alignTop="@+id/checkBox3"
+        android:layout_toLeftOf="@+id/textView6"
+        android:layout_toStartOf="@+id/textView6" />
+
+    <TextView
+        android:text="¿que deseas?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:id="@+id/textView5"
+        android:layout_above="@+id/checkBox"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:text="Subir de peso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox3"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/bSiguiente"
+        android:layout_toRightOf="@+id/checkBox2"
+        android:layout_toEndOf="@+id/checkBox2" />
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spAlergias"
-        android:layout_alignParentTop="true"
+        android:id="@+id/patologia"
+        android:layout_below="@+id/textView4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="19dp" />
 
-    <CheckBox
-        android:text="Granos  "
+    <TextView
+        android:text="@string/select_patology"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/cbGranos"
-        android:layout_below="@+id/cbFrutas"
+        android:id="@+id/textView4"
+        android:layout_marginTop="29dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="¿Alguna lesion?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/alergia"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:id="@+id/lesion"
+        android:layout_below="@+id/textView6"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@color/colorAccent"
-        android:layout_alignRight="@+id/cbHarinas"
-        android:layout_alignEnd="@+id/cbHarinas" />
+        android:layout_marginTop="19dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/alergia"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/tAlergia"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="¿Tienes alguna alergia a la comida?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tAlergia"
+        android:layout_marginTop="36dp"
+        android:layout_below="@+id/patologia"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>

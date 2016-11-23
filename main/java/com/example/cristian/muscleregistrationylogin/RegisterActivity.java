@@ -1,123 +1,97 @@
 package com.example.cristian.muscleregistrationylogin;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import com.example.cristian.muscleregistrationylogin.dummy.BaseDeDatos;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class RegisterActivity extends AppCompatActivity {
+import org.json.JSONException;
+import org.json.JSONObject;
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
+public class RegisterActivity extends Activity {
+
+    DataBaseHelper helper = new DataBaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        final EditText etEdad;
-        etEdad = (EditText) findViewById(R.id.etEdad);
-        final EditText etNombre;
-        etNombre = (EditText) findViewById(R.id.etNombre);
-        final EditText etContraseña;
-        etContraseña = (EditText) findViewById(R.id.etContraseña);
-        final EditText etUsuario;
-        etUsuario = (EditText) findViewById(R.id.etUsuario);
-        final EditText etPeso;
-        etPeso = (EditText) findViewById(R.id.etPeso);
-        final EditText etAltura;
-        etAltura = (EditText) findViewById(R.id.etAltura);
-        final EditText etTelefono;
-        etTelefono = (EditText) findViewById(R.id.etTelefono);
-        final Button bRegistro;
-        bRegistro = (Button) findViewById(R.id.bRegistro);
-        final Button etPatologias;
-        etPatologias = (Button) findViewById(R.id.bPatologias);
-        final Button etConsumo;
-        etConsumo = (Button) findViewById(R.id.etConsumo);
-        final CheckBox etLesion;
-        etLesion = (CheckBox) findViewById(R.id.etLesion);
+        final Button bAt = (Button) findViewById(R.id.bAtras);
 
-        bRegistro.setOnClickListener(new View.OnClickListener() {
+        bAt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent regsterActiityIntent = new Intent(RegisterActivity.this, UserAreaActivity.class);
-                RegisterActivity.this.startActivity(regsterActiityIntent);
+                Intent registerIntent1 = new Intent(RegisterActivity.this, LoginActivity.class);
+                RegisterActivity.this.startActivity(registerIntent1);
             }
         });
-        etConsumo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    }
 
-                Intent regsterActiityIntent = new Intent(RegisterActivity.this, UserConsumoActivity.class);
-                RegisterActivity.this.startActivity(regsterActiityIntent);
-                //BaseDeDatos bd = new BaseDeDatos(getBaseContext().getApplicationContext());
-                //bd.onCreate(SQLiteDatabase.create());
+    public void onSingUpClick(View v){
+        if(v.getId()==R.id.bRegistro) {
+
+
+            EditText etNombre = (EditText) findViewById(R.id.etNombre);
+            EditText etUsuario = (EditText) findViewById(R.id.etUsuario);
+            EditText etContraseña = (EditText) findViewById(R.id.etContraseña);
+            EditText etContraseña1=(EditText)findViewById(R.id.etContraseña1);
+            EditText etEdad = (EditText) findViewById(R.id.etEdad);
+            EditText etPeso = (EditText) findViewById(R.id.etPeso);
+            EditText etAltura = (EditText) findViewById(R.id.etAltura);
+            EditText etTelefono = (EditText) findViewById(R.id.etTelefono);
+            Button bRegistro = (Button) findViewById(R.id.bRegistro);
+
+
+            String namestr = etNombre.getText().toString();
+            String usernamestr = etUsuario.getText().toString();
+            String passstr = etContraseña.getText().toString();
+            String pass1str = etContraseña1.getText().toString();
+            String agestr = etEdad.getText().toString();
+            String weigthstr = etPeso.getText().toString();
+            String heigthstr = etAltura.getText().toString();
+            String telstr = etTelefono.getText().toString();
+
+
+            if(!passstr.equals(pass1str) ){
+
+                Toast pass = Toast.makeText(RegisterActivity.this,"Las contraseñas no son iguales", Toast.LENGTH_SHORT);
+                pass.show();
+            }else{
+                //inserar la infromacion en la base de datos
+
+                Contact c = new Contact();
+                c.setName(namestr);
+                c.setUsername(usernamestr);
+                c.setPass(passstr);
+                c.setAge(agestr);
+                c.setWeigth(weigthstr);
+                c.setHeght(heigthstr);
+                c.setTel(telstr);
+
+                helper.insertContact(c);
+
+                Toast pass = Toast.makeText(RegisterActivity.this,"Ya estas registrado, pulsa atras para inciar seción", Toast.LENGTH_SHORT);
+                pass.show();
+
 
             }
-        });
 
-        etPatologias.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent regsterActiityIntent = new Intent(RegisterActivity.this,UserPatologiasActivity.class );
-                RegisterActivity.this.startActivity(regsterActiityIntent);
-            }
-        });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-    }
-
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("Register Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        AppIndex.AppIndexApi.start(client, getIndexApiAction());
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
-        client.disconnect();
+        }
     }
 }

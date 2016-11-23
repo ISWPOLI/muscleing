@@ -42,15 +42,6 @@
         android:layout_alignParentEnd="true"
         android:textColor="@android:color/black" />
 
-    <TextView
-        android:text="Registrarse aquí"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:id="@+id/tvRegistro"
-        android:layout_below="@+id/bIncio"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:text="Iniciar sesion"
         android:layout_width="wrap_content"
@@ -63,6 +54,21 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:elevation="0dp"
-        android:background="@color/colorAccent" />
+        android:background="@color/colorAccent"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:text="Registrate aquí"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRegistro"
+        android:layout_below="@+id/bIncio"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorAccent"
+        android:onClick="onButtonClick" />
 
 </RelativeLayout>

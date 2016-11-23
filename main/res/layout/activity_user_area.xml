@@ -6,103 +6,12 @@
     android:id="@+id/activity_user_area"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     android:background="@drawable/linea"
     tools:context="com.example.cristian.muscleregistrationylogin.UserAreaActivity"
     >
 
-    <CheckBox
-        android:text="M"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cbMiercoles"
-        android:layout_alignBaseline="@+id/cbMartes"
-        android:layout_alignBottom="@+id/cbMartes"
-        android:layout_toRightOf="@+id/cbMartes"
-        android:layout_toEndOf="@+id/cbMartes" />
 
-    <CheckBox
-        android:text="M"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cbMartes"
-        android:layout_alignBaseline="@+id/cbLunes"
-        android:layout_alignBottom="@+id/cbLunes"
-        android:layout_toRightOf="@+id/cbLunes"
-        android:layout_toEndOf="@+id/cbLunes" />
-
-    <CheckBox
-        android:text="J"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cbJueves"
-        android:layout_alignBaseline="@+id/cbMiercoles"
-        android:layout_alignBottom="@+id/cbMiercoles"
-        android:layout_toRightOf="@+id/cbMiercoles"
-        android:layout_toEndOf="@+id/cbMiercoles" />
-
-    <CheckBox
-        android:text="V"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cbViernes"
-        android:layout_alignBaseline="@+id/cbJueves"
-        android:layout_alignBottom="@+id/cbJueves"
-        android:layout_toRightOf="@+id/cbJueves"
-        android:layout_toEndOf="@+id/cbJueves" />
-
-    <CheckBox
-        android:text="S"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cbSabado"
-        android:layout_alignBaseline="@+id/cbViernes"
-        android:layout_alignBottom="@+id/cbViernes"
-        android:layout_toRightOf="@+id/cbViernes"
-        android:layout_toEndOf="@+id/cbViernes" />
-
-    <CheckBox
-        android:text="D"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/cbSabado"
-        android:layout_toRightOf="@+id/cbSabado"
-        android:layout_toEndOf="@+id/cbSabado"
-        android:id="@+id/cbDomingo" />
-
-    <Button
-        android:text="Siguiente / Alergias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bAlergias"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:background="@color/colorAccent" />
-
-    <CheckBox
-        android:text="L"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cbLunes"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp"
-        android:layout_above="@+id/bAlergias"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="26dp" />
-
-    <TimePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/timePicker"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <include layout="@layout/content_main" />
 
 </RelativeLayout>
