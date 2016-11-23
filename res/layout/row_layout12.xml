@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    >
+
+<ImageView
+    android:id="@+id/rutine_poster"
+    android:layout_width="100dp"
+    android:layout_height="75dp"
+    android:layout_alignParentLeft="true"
+    android:src="@drawable/press"
+
+    />
+
+    <TextView
+
+        android:id="@+id/rutine_name"
+        android:layout_width="175dp"
+        android:layout_height="75dp"
+        android:layout_toRightOf="@+id/rutine_poster"
+        android:text="este es el nombre de la rutina"
+        android:gravity="center"
+        />
+
+    <TextView
+
+        android:id="@+id/rutine_reps"
+        android:layout_width="175dp"
+        android:layout_height="75dp"
+        android:layout_toRightOf="@+id/rutine_name"
+        android:text="estas son las repeticiones"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        />
+
+
+
+
+</RelativeLayout>
